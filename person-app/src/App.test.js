@@ -19,4 +19,12 @@ describe('App', () => {
 
     expect(personList).toHaveLength(1);
   });
+  it('has state', () => {
+    const appWrapper = shallow(<App />);
+    const appState = appWrapper.state()
+  
+    expect(appState).not.toBeNull()
+  })
+
+
 });
