@@ -30,6 +30,9 @@ describe('App', () => {
 
     expect(appState.people).toBeDefined()
   })
+  it('passes people property of state to personList as prop',() => {
+    const personList = appWrapper.find(PersonList);
 
-
+    expect(personList.props().people).toEqual(appWrapper.state().people);
+  })
 });
