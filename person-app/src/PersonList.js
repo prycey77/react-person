@@ -1,3 +1,5 @@
 import React from 'react'
 
-export default () => <ul></ul>
+
+export default ( {people = []} ) => 
+<ul>{people.map((person, i) =><li key={i}></li> )}</ul> 
